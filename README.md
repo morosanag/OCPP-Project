@@ -6,7 +6,9 @@ The system is based on the following criteria: interoperability, security and fi
 OCPP interoperability - REST over WebSocket and SOAP over HTTP integration.
 
 ## System architecture
-<iframe src="https://drive.google.com/file/d/0BzI7XjAgDAvheXhnRDFfVktGWWM/preview" width="640" height="480"></iframe>
+<p align="center">
+  <img src="https://drive.google.com/file/d/0BzI7XjAgDAvheXhnRDFfVktGWWM/preview"  width="640" height="480"/>
+</p>
 
 ## Papers
 [Electric Mobility in Green and Smart Cities - OCPP](https://drive.google.com/file/d/0BzI7XjAgDAvhRDA1YUFYbnJ4czA/view?usp=sharing)
