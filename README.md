@@ -7,7 +7,7 @@ OCPP interoperability - REST over WebSocket and SOAP over HTTP integration.
 
 ## System architecture
 <p align="center">
-  <img src="https://drive.google.com/file/d/0BzI7XjAgDAvheXhnRDFfVktGWWM/preview"  width="640" height="480"/>
+  <img src="https://raw.githubusercontent.com/morosanag/OCPP-Project/master/architecure.png"  width="640" height="480"/>
 </p>
 
 ## Papers
