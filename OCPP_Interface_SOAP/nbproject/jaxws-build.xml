@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-ocpp_chargepointservice_1.5_final" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ocpp_chargepointservice_1.5_final"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ocpp_chargepointservice_1.5_final" destdir="${build.generated.dir}/jax-wsCache/ocpp_chargepointservice_1.5_final" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ocpp_chargepointservice_1.5_final/wsdl/serverstore.ro/OCPP_WSDL/ocpp_chargepointservice_1.5_final.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://serverstore.ro/OCPP_WSDL/ocpp_chargepointservice_1.5_final.wsdl" xnocompile="true" xendorsed="true" package="com.offnet.ocpp.client">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ocpp_chargepointservice_1.5_final/wsdl/serverstore.ro/OCPP_WSDL/ocpp_chargepointservice_1.5_final.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ocpp_chargepointservice_1.5_final"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ocpp_chargepointservice_1.5_final">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ocpp_chargepointservice_1.5_final" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/offnet/ocpp/client"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ocpp_chargepointservice_1.5_final"/>
+    </target>
+    <target name="wsimport-service-Dispatcher" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/Dispatcher"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/Dispatcher" destdir="${build.generated.dir}/jax-wsCache/service/Dispatcher" wsdl="${basedir}/${conf-dir}xml-resources/web-services/Dispatcher/wsdl/ocpp_centralsystemservice_1.5_final.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/Dispatcher/wsdl/ocpp_centralsystemservice_1.5_final.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/Dispatcher"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/Dispatcher">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/Dispatcher">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/Dispatcher/wsdl/"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-Dispatcher" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ocpp/cs/_2012/_06"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/Dispatcher"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ocpp_chargepointservice_1.5_final"/>
+    <target name="wsimport-service-generate" depends="wsimport-service-Dispatcher"/>
+</project>

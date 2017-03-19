@@ -1,0 +1,19 @@
+<Configuration status="TRACE">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} \t%m%n"/>
+    </Console>
+    <RollingFile name="FileAppender" fileName="/var/www/serverstore.ro/web/OCPP_Logs/ocpp_soap.log" filePattern="/var/www/serverstore.ro/web/OCPP_Logs/ocpp_soap_%d{MM-dd-yyyy}.log" immediateFlush="false">
+     <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} \t%m%n"/>
+      <TimeBasedTriggeringPolicy />
+    </RollingFile>
+  </Appenders>
+  <Loggers>
+    <Root level="TRACE">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="FileAppender"/>
+    </Root>
+  </Loggers>
+</Configuration>
+
+

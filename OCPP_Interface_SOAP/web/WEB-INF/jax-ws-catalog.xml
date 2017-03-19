@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/home/gabi/NetBeansProjects/OCPP_Interface_SOAP/wsdl/ocpp_centralsystemservice_1.5_final.wsdl" uri="src/conf/xml-resources/web-services/Dispatcher/wsdl/ocpp_centralsystemservice_1.5_final.wsdl"/>
+    <system systemId="file:/home/gabi/NetBeansProjects/OCPP_Interface_SOAP/wsdl/ocpp_chargepointservice_1.5_final.wsdl" uri="wsdl/ocpp_chargepointservice_1.5_final.wsdl"/>
+    <system systemId="http://serverstore.ro/OCPP_WSDL/ocpp_chargepointservice_1.5_final.wsdl" uri="wsdl/serverstore.ro/OCPP_WSDL/ocpp_chargepointservice_1.5_final.wsdl"/>
+</catalog>

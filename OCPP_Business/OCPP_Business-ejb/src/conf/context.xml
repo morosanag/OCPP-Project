@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/ElectriCar_OCPP">
+  <Resource auth="Container" 
+            driverClassName="com.mysql.jdbc.Driver" 
+            maxActive="20" 
+            maxIdle="10" 
+            maxWait="-1" 
+            name="new_mariadb" 
+            password="some_pass" 
+            type="javax.sql.DataSource" 
+            url="jdbc:mysql://serverstore.ro:3306/open_charge_db?zeroDateTimeBehavior=convertToNull" 
+            username="monty"/>
+</Context>
